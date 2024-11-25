@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Installing Demitri's dotfiles..."
+echo "🚀 Installing Coofle's dotfiles..."
 
 # Check if running on Arch Linux
 if ! command -v pacman &> /dev/null; then

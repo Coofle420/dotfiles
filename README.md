@@ -1,4 +1,4 @@
-# Demitri's Dotfiles 
+# Coofle's Dotfiles 
 
 A collection of my personal dotfiles for my Linux setup, featuring a cyberpunk-themed Qtile configuration with custom widgets and scratchpads.
 
@@ -39,7 +39,7 @@ pip install psutil
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/yourusername/dotfiles.git
+git clone https://github.com/Coofle420/dotfiles.git
 cd dotfiles
 ```
 
