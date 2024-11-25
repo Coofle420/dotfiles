@@ -1,14 +1,14 @@
 # Dotfiles
 
 ## About Me
-Hi, I'm Coofle420! I'm a Linux enthusiast who enjoys customizing my desktop environment. This is my personal collection of dotfiles that I use to maintain a consistent and efficient workflow across my systems.
+Hi, I'm Coofle I am a Linux user who is passionate about open source and free software. I have been using Linux since 2020 and I am currently using Arch Linux. And Gentoo Linux for my daily use. These are my dotfiles. Thought I share them with the world. Because I hope someone will find them useful. and have Insperation to Learn from them as well.
 
 ### My Setup
 - **OS**: Arch Linux
 - **WM**: Qtile
 - **Terminal**: Kitty
 - **Shell**: Zsh
-- **Editor**: Neovim
+- **Editor**: Emacs
 - **Compositor**: Picom
 - **Application Launcher**: Rofi
 - **Notification Daemon**: Dunst
