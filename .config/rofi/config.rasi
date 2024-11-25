@@ -1,0 +1,151 @@
+configuration {
+    modi: "window,run,drun";
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+    window-format: "{c}: {t}";
+    icon-theme: "Papirus";
+}
+
+* {
+    background: #16161e;
+    background-alt: #1a1b26;
+    background-selected: #24283b;
+    foreground: #c0caf5;
+    foreground-alt: #565f89;
+    accent: #6a4c93;
+    accent-alt: #7d5ba6;
+    urgent: #f7768e;
+}
+
+window {
+    background-color: @background;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 12px;
+    width: 45%;
+    padding: 12px;
+    spacing: 0px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+    spacing: 12px;
+    background-color: transparent;
+}
+
+inputbar {
+    spacing: 8px;
+    padding: 8px 12px;
+    background-color: @background-alt;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    spacing: 0;
+    text-color: @accent;
+    background-color: transparent;
+    padding: 0px 4px;
+}
+
+entry {
+    spacing: 0;
+    text-color: @foreground;
+    background-color: transparent;
+    placeholder: "Type to search...";
+    placeholder-color: @foreground-alt;
+}
+
+message {
+    border: 2px;
+    border-color: @accent;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: @background-alt;
+}
+
+textbox {
+    text-color: @foreground;
+    background-color: transparent;
+}
+
+listview {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    spacing: 8px;
+    background-color: transparent;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: true;
+    lines: 8;
+}
+
+element {
+    padding: 8px 12px;
+    spacing: 8px;
+    border-radius: 8px;
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element normal.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @background-selected;
+    text-color: @foreground;
+    border: 2px;
+    border-color: @accent;
+}
+
+element alternate.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 8px 0 0;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: none;
+    vertical-align: 0.5;
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-width: 8px;
+    handle-color: @accent;
+    padding: 0 4px;
+    border-radius: 8px;
+    background-color: @background-alt;
+}
+
+button {
+    spacing: 0;
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+button selected {
+    background-color: @background-selected;
+    text-color: @foreground;
+    border: 2px;
+    border-color: @accent;
+}
