@@ -1,5 +1,20 @@
 # Dotfiles
 
+## About Me
+Hi, I'm Coofle420! I'm a Linux enthusiast who enjoys customizing my desktop environment. This is my personal collection of dotfiles that I use to maintain a consistent and efficient workflow across my systems.
+
+### My Setup
+- **OS**: Arch Linux
+- **WM**: Qtile
+- **Terminal**: Kitty
+- **Shell**: Zsh
+- **Editor**: Neovim
+- **Compositor**: Picom
+- **Application Launcher**: Rofi
+- **Notification Daemon**: Dunst
+
+## What's Inside
+
 This repository contains my personal dotfiles for:
 - Qtile window manager
 - Picom compositor
