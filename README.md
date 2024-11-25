@@ -6,6 +6,9 @@ This repository contains my personal dotfiles for:
 - Rofi application launcher
 - Dunst notification daemon
 
+## Screenshot
+![Desktop Screenshot](screenshots/desktop.png)
+
 ## Installation
 
 1. Clone this repository:
