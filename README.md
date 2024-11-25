@@ -10,7 +10,7 @@ This repository contains my personal dotfiles for:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git
+git clone https://github.com/Coofle420/dotfiles.git
 ```
 
 2. Create symbolic links:
