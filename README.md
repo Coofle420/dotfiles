@@ -12,6 +12,7 @@ Hi, I'm Coofle! I am a Linux user who is passionate about open source and free s
 - **Compositor**: Picom ✨
 - **Application Launcher**: Rofi 🚀
 - **Notification Daemon**: Dunst 🔔
+- **Wallpaper Manager**: Nitrogen 🖼️
 
 ## 📦 What's Inside
 This repository contains my personal dotfiles for:
@@ -19,6 +20,8 @@ This repository contains my personal dotfiles for:
 - Picom compositor
 - Rofi application launcher
 - Dunst notification daemon
+- Nitrogen wallpaper manager
+- Collection of wallpapers
 
 ## 📸 Screenshot
 ![Desktop Screenshot](screenshots/desktop.png)
@@ -37,3 +40,5 @@ ln -s ~/dotfiles/.config/qtile ~/.config/qtile
 ln -s ~/dotfiles/.config/picom ~/.config/picom
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/dunst ~/.config/dunst
+ln -s ~/dotfiles/.config/nitrogen ~/.config/nitrogen
+ln -s ~/dotfiles/.wallpapers ~/.wallpapers
