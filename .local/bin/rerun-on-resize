@@ -1,0 +1,23 @@
+#!/bin/bash
+# Re-run a full-screen terminal program whenever the terminal window is resized,
+# and drop kitty's window padding while it runs so there is no dark frame around it.
+# Quit the program normally (q / Ctrl+C) to exit for good.
+pad_off() { command -v kitten >/dev/null && [ -n "$KITTY_LISTEN_ON" ] && kitten @ set-spacing padding=0 >/dev/null 2>&1; }
+pad_on()  { command -v kitten >/dev/null && [ -n "$KITTY_LISTEN_ON" ] && kitten @ set-spacing padding=default >/dev/null 2>&1; }
+pad_off; sleep 0.2
+resized=0
+pid=
+on_winch() { resized=1; [ -n "$pid" ] && kill "$pid" 2>/dev/null; }
+cleanup()  { [ -n "$pid" ] && kill "$pid" 2>/dev/null; pad_on; }
+trap on_winch WINCH
+trap 'cleanup; exit 130' INT TERM
+trap pad_on EXIT
+while :; do
+  resized=0
+  "$@" <&0 &
+  pid=$!
+  while kill -0 "$pid" 2>/dev/null; do wait "$pid" 2>/dev/null; done
+  [ "$resized" = 1 ] || break
+  sleep 0.2      # debounce while the window is still being dragged
+  printf '\033[2J\033[H'
+done

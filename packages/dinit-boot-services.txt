@@ -1,0 +1,13 @@
+acpid
+ananicy-cpp
+bluetoothd
+chrony
+libvirtd
+logind
+metalog
+NetworkManager
+sddm
+userspawn
+virtlockd
+virtlogd
+zramen

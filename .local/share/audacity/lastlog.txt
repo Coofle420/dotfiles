@@ -1,0 +1,8 @@
+03:10:05 PM: Audacity 3.7.9
+03:10:05 PM: FFmpeg libraries loaded successfully from: /usr/lib/libavformat.so.63.1.102
+03:10:06 PM: FFmpeg libraries loaded successfully from: /usr/lib/libavformat.so.63.1.102
+03:12:35 PM: Error: Impossible to get permissions for file '/home/tree/Documents/10.wav' (error 2: No such file or directory)
+03:12:35 PM: Error: File '/home/tree/Documents/10.wav' couldn't be renamed '/home/tree/Documents/1.wav' (error 2: No such file or directory)
+05:07:22 PM: Operation 'Export' took 0.013000 seconds. Poll was called 1 times and took 0.000001 seconds. Yield was called 0 times and took 0.000000 seconds.
+05:07:22 PM: Error: Impossible to get permissions for file '/home/tree/Documents/20.wav' (error 2: No such file or directory)
+05:07:22 PM: Error: File '/home/tree/Documents/20.wav' couldn't be renamed '/home/tree/Documents/2.wav' (error 2: No such file or directory)

@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/noctalia --daemon
+logfile = /home/tree/.local/share/noctalia/dinit.log
+restart = true

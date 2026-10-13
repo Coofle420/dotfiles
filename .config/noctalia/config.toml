@@ -1,0 +1,135 @@
+# Catppuccin Mocha rice — floating capsule bar
+[theme]
+source = "custom"
+custom_palette = "DarkPurple"
+mode = "dark"
+
+[theme.templates]
+enable_builtin_templates = true
+builtin_ids = ["kitty", "foot", "gtk3", "gtk4", "qt", "kcolorscheme", "btop"]
+enable_community_templates = true
+community_ids = ["steam"]
+
+# Mango handles blur; Noctalia draws its own shadows (disabled below only if you enable mango layer shadows)
+[bar]
+order = ["default"]
+
+[bar.default]
+position = "bottom"
+thickness = 30
+layer = "top"
+background_opacity = 0.0
+compositor_blur = false
+border = "primary"
+border_width = 0.0
+shadow = false
+contact_shadow = false
+radius = 0
+concave_edge_corners = false
+margin_edge = 4
+margin_ends = 14
+margin_opposite_edge = 0
+padding = 4
+widget_spacing = 16
+hover_highlight = true
+font_weight = 600
+capsule = false
+capsule_fill = "surface_variant"
+capsule_opacity = 0.0
+capsule_radius = 8.0
+start = ["workspaces", "layouts"]
+center = ["clock"]
+end = ["cpu", "ram", "tray", "volume", "network", "notifications", "control-center"]
+
+[widget.workspaces]
+style = "regular"
+show_labels = true
+label_source = "id"
+labels_only_when_occupied = false
+pill_scale = 1.0
+active_pill_size = 1.0
+inactive_pill_size = 1.0
+focused_color = "primary"
+occupied_color = "secondary"
+empty_color = "surface_variant"
+urgent_color = "error"
+focused_output_only = false
+
+[widget.layouts]
+type = "ezequiel/mango_layouts:btn"
+show_glyph = true
+show_text = false
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+visualization = "none"
+show_value = true
+
+[widget.temp]
+type = "sysmon"
+stat = "cpu_temp"
+visualization = "none"
+show_value = true
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_used"
+visualization = "none"
+show_value = true
+
+[widget.media]
+type = "media"
+album_art_only = true
+rotate_album_art = true
+art_size = 32
+hide_when_no_media = true
+
+[widget.weather]
+type = "weather"
+show_condition = false
+show_temperature = true
+
+[widget.clock]
+type = "clock"
+format = "{:%H:%M}"
+vertical_format = "{:%H\n%M}"
+tooltip_format = "{:%A, %B %d, %Y}"
+
+# Launcher: icon grid, soft glass panel, mauve outline
+[shell.panel]
+transparency_mode = "soft"
+borders = true
+shadow = true
+list_item_background = true
+launcher_placement = "floating"
+launcher_position = "center"
+
+[shell.launcher]
+app_grid = true
+categories = true
+show_icons = true
+compact = false
+sort_by_usage = true
+pinned = ["kitty.desktop", "helium.desktop", "steam.desktop", "org.kde.dolphin.desktop", "com.obsproject.Studio.desktop"]
+
+[shell]
+
+[shell.screenshot]
+save_to_file = true
+directory = "/home/tree/Pictures/Screenshots"
+filename_pattern = "screenshot_%Y-%m-%d_%H-%M-%S"
+copy_to_clipboard = true
+freeze_screen = true
+
+# Workaround: the bar's workspace highlight goes stale after the session is locked/unlocked,
+# so restart Noctalia (and its Mango workspace connection) right after every unlock.
+[hooks]
+session_unlocked = 'setsid -f sh -c "sleep 1; pkill -x noctalia; sleep 1; exec noctalia >/dev/null 2>&1"'
+
+# Mango 0.18 renamed its config keys; Noctalia's built-in Mango template still writes the old names,
+# so use our own template with the new names (see ~/.config/noctalia/templates/mango.conf).
+[theme.templates.user.mango]
+input_path = "templates/mango.conf"
+output_path = "$XDG_CONFIG_HOME/mango/noctalia.conf"
+post_hook = "mmsg dispatch reload_config"

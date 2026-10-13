@@ -1,0 +1,32 @@
+:root {
+  --bg: #120c1f; --card: rgba(31, 21, 53, 0.62); --line: #4a3a78; --hover: #2c1f4d;
+  --text: #e9e0ff; --dim: #c4b5e8; --mute: #7d6aa8; --primary: #b388ff; --pink: #d58cf5;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg) url("bg.jpg") center / cover no-repeat fixed;
+  color: var(--text); font-family: "JetBrainsMono Nerd Font", "Inter", system-ui, sans-serif;
+  display: flex; align-items: center; justify-content: center;
+}
+main { width: min(860px, 92vw); display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.hero { text-align: center; }
+.time { font-size: clamp(64px, 11vw, 132px); font-weight: 700; letter-spacing: -2px; line-height: 1;
+        background: linear-gradient(135deg, #e9e0ff, var(--primary) 60%, var(--pink)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.date { margin-top: 8px; color: var(--dim); font-size: 18px; letter-spacing: 3px; text-transform: uppercase; }
+.greeting { margin-top: 6px; color: var(--mute); font-size: 15px; }
+#search { width: 100%; display: flex; align-items: center; gap: 14px; padding: 6px 20px;
+          background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+          backdrop-filter: blur(14px); transition: border-color .15s, box-shadow .15s; }
+#search:focus-within { border-color: var(--primary); box-shadow: 0 0 28px rgba(179, 136, 255, 0.35); }
+#search .glyph { color: var(--primary); font-size: 18px; }
+#q { flex: 1; background: none; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 18px; padding: 14px 0; }
+#q::placeholder { color: var(--mute); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 14px; width: 100%; }
+.tile { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px 10px; text-decoration: none;
+        color: var(--text); background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+        backdrop-filter: blur(14px); transition: transform .12s, border-color .12s, box-shadow .12s, background .12s; }
+.tile:hover, .tile:focus-visible { transform: translateY(-3px); border-color: var(--primary); background: var(--hover);
+        box-shadow: 0 8px 26px rgba(179, 136, 255, 0.30); outline: 0; }
+.tile img { width: 36px; height: 36px; border-radius: 10px; }
+.tile span { font-size: 14px; color: var(--dim); }

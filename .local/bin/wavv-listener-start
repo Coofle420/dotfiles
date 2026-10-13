@@ -1,0 +1,7 @@
+#!/bin/sh
+exec 9>"${XDG_RUNTIME_DIR:-/tmp}/wavv-listener.lock"
+flock -n 9 || exit 0
+while true; do
+  python3 "$HOME/.local/bin/wavv_listener.py" >> "$HOME/.local/state/wavv-listener.log" 2>&1
+  sleep 5
+done

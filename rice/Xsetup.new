@@ -1,0 +1,30 @@
+#!/bin/sh
+# Xsetup - run as root before the login dialog appears (on boot AND after every logout)
+# Main monitor DP-2: 2560x1440 at its highest refresh rate (200 Hz); HDMI-A-1: 1920x1080 at 144 Hz to its right.
+# Never fails the login: every step is optional.
+
+DRY="${XSETUP_DRY:-0}"
+run() { if [ "$DRY" = 1 ]; then echo "would run: xrandr $*"; else xrandr "$@" >/dev/null 2>&1 || true; fi; }
+
+# highest refresh rate offered at a given size on a given output
+best_rate() {  # $1 = output, $2 = WxH
+  xrandr 2>/dev/null | awk -v out="$1" -v size="$2" '
+    $1==out {f=1; next}
+    /^[A-Za-z]/ {f=0}
+    f && $1==size { for (i=2;i<=NF;i++) { r=$i; gsub(/[*+]/,"",r); if (r+0>m) m=r+0 } }
+    END { if (m>0) printf "%.2f", m }'
+}
+
+has_output() { xrandr 2>/dev/null | grep -q "^$1 connected"; }
+
+if has_output DP-2; then
+  r=$(best_rate DP-2 2560x1440)
+  if [ -n "$r" ]; then run --output DP-2 --primary --mode 2560x1440 --rate "$r" --pos 0x0
+  else run --output DP-2 --primary --auto --pos 0x0; fi
+fi
+
+if has_output HDMI-A-1; then
+  r=$(best_rate HDMI-A-1 1920x1080)
+  if [ -n "$r" ]; then run --output HDMI-A-1 --mode 1920x1080 --rate "$r" --pos 2560x0
+  else run --output HDMI-A-1 --auto --pos 2560x0; fi
+fi

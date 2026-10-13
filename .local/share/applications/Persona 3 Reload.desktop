@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Persona 3 Reload
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/2161700
+Icon=steam_icon_2161700
+Terminal=false
+Type=Application
+Categories=Game;

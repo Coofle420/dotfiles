@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "WAVV Cider Pause",
+  "version": "1.0",
+  "description": "Pauses Cider while a WAVV or GHL call is live.",
+  "host_permissions": ["http://127.0.0.1:5055/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "all_frames": true,
+    "match_about_blank": true,
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

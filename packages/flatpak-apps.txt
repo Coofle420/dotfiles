@@ -1,0 +1,6 @@
+com.adamcake.Bolt
+com.vysp3r.ProtonPlus
+md.obsidian.Obsidian
+me.proton.Mail
+me.proton.Pass
+org.fedoraproject.MediaWriter

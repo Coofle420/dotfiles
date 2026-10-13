@@ -1,0 +1,9 @@
+[Unit]
+Description=WAVV call listener (pauses Cider during calls)
+
+[Service]
+ExecStart=/usr/bin/python3 %h/.local/bin/wavv_listener.py
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

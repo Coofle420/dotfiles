@@ -1,0 +1,4 @@
+dbus
+pipewire
+pipewire-pulse
+wireplumber

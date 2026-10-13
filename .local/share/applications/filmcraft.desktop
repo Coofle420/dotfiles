@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Filmcraft
+Comment=Filmcraft 0.4.0 (AppImage)
+Exec=/home/tree/Downloads/filmcraft-0.4.0-linux-x86_64.AppImage %U
+Icon=filmcraft
+Terminal=false
+Categories=AudioVideo;Video;
+StartupWMClass=filmcraft

@@ -1,0 +1,4 @@
+[MIME Cache]
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop;
+x-scheme-handler/discord=discord.desktop;
+x-scheme-handler/fluxer=app.fluxer.FluxerDesktop.desktop;

@@ -1,0 +1,114 @@
+{
+  "manifest_version": 3,
+  "name": "Noctalia Purple",
+  "version": "1.0",
+  "theme": {
+    "colors": {
+      "frame": [
+        18,
+        12,
+        31
+      ],
+      "frame_inactive": [
+        18,
+        12,
+        31
+      ],
+      "frame_incognito": [
+        10,
+        6,
+        20
+      ],
+      "frame_incognito_inactive": [
+        10,
+        6,
+        20
+      ],
+      "toolbar": [
+        31,
+        21,
+        53
+      ],
+      "tab_text": [
+        233,
+        224,
+        255
+      ],
+      "tab_background_text": [
+        196,
+        181,
+        232
+      ],
+      "bookmark_text": [
+        233,
+        224,
+        255
+      ],
+      "toolbar_button_icon": [
+        179,
+        136,
+        255
+      ],
+      "button_background": [
+        31,
+        21,
+        53
+      ],
+      "ntp_background": [
+        18,
+        12,
+        31
+      ],
+      "ntp_text": [
+        233,
+        224,
+        255
+      ],
+      "ntp_link": [
+        179,
+        136,
+        255
+      ],
+      "ntp_header": [
+        18,
+        12,
+        31
+      ],
+      "omnibox_background": [
+        18,
+        12,
+        31
+      ],
+      "omnibox_text": [
+        233,
+        224,
+        255
+      ],
+      "background_tab": [
+        18,
+        12,
+        31
+      ],
+      "background_tab_inactive": [
+        18,
+        12,
+        31
+      ]
+    },
+    "tints": {
+      "buttons": [
+        0.74,
+        0.5,
+        0.95
+      ],
+      "frame": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "center"
+    }
+  }
+}

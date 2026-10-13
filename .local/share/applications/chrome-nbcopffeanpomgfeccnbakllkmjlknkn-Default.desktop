@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Basecamp
+Exec=/opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=nbcopffeanpomgfeccnbakllkmjlknkn
+Icon=/home/tree/.local/share/icons/hicolor/512x512/apps/chrome-nbcopffeanpomgfeccnbakllkmjlknkn-Default.png
+StartupWMClass=crx_nbcopffeanpomgfeccnbakllkmjlknkn
+Actions=My-tasks;Out-of-Office
+
+[Desktop Action My-tasks]
+Name=My tasks
+Exec=/opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=nbcopffeanpomgfeccnbakllkmjlknkn --app-launch-url-for-shortcuts-menu-item=https://app.basecamp.com/3108250/my/assignments
+
+[Desktop Action Out-of-Office]
+Name=Out of Office
+Exec=/opt/helium-browser-bin/helium-wrapper --profile-directory=Default --app-id=nbcopffeanpomgfeccnbakllkmjlknkn --app-launch-url-for-shortcuts-menu-item=https://app.basecamp.com/3108250/my/out_of_office

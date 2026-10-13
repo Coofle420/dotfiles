@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>New Tab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div id="time" class="time">--:--</div>
+      <div id="date" class="date"></div>
+      <div id="greeting" class="greeting"></div>
+    </section>
+    <form id="search" autocomplete="off">
+      <span class="glyph">&#x1F50D;&#xFE0E;</span>
+      <input id="q" type="text" placeholder="Search or type a URL" spellcheck="false" autofocus>
+    </form>
+    <nav id="tiles" class="tiles"></nav>
+  </main>
+  <script src="newtab.js"></script>
+</body>
+</html>

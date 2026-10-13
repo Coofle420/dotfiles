@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Core Keeper
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/1621690
+Icon=steam_icon_1621690
+Terminal=false
+Type=Application
+Categories=Game;

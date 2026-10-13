@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Noctalia Start",
+  "version": "1.0",
+  "description": "Purple start page and scrollbars matching the Noctalia DarkPurple desktop. Local files only, no network.",
+  "permissions": ["search", "favicon"],
+  "chrome_url_overrides": { "newtab": "newtab.html" },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "css": ["scroll.css"], "run_at": "document_start", "all_frames": true }
+  ]
+}

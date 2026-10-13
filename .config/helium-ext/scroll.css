@@ -1,0 +1,3 @@
+/* Thin violet scrollbars + violet text selection on every site (Noctalia DarkPurple) */
+* { scrollbar-width: thin; scrollbar-color: #7d6aa8 transparent; }
+::selection { background: rgba(179, 136, 255, 0.45); color: inherit; }

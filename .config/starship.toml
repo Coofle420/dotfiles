@@ -1,0 +1,130 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Noctalia DarkPurple prompt (matches bar, terminals, yazi, Neovim)
+add_newline = true
+palette = 'noctalia'
+
+format = """
+[](fg:mauve)\
+$os\
+$username\
+[](bg:peri fg:mauve)\
+$directory\
+[](bg:pink fg:peri)\
+$git_branch\
+$git_status\
+[](bg:surface fg:pink)\
+$c$rust$golang$nodejs$python$lua$docker_context\
+[](fg:surface)\
+$fill\
+$cmd_duration\
+$time
+$character"""
+
+[palettes.noctalia]
+mauve    = '#b388ff'
+peri     = '#8f9bff'
+pink     = '#d58cf5'
+crust    = '#120c1f'
+surface  = '#2c1f4d'
+text     = '#e9e0ff'
+lavender = '#c4b5e8'
+comment  = '#7d6aa8'
+red      = '#ff6b9d'
+green    = '#8de6b0'
+yellow   = '#f7d58a'
+cyan     = '#7fe0e8'
+
+[os]
+disabled = false
+style = 'bg:mauve fg:crust'
+format = '[ $symbol]($style)'
+
+[os.symbols]
+Artix = '󰣇'
+Arch = '󰣇'
+Linux = ''
+Windows = ''
+
+[username]
+show_always = true
+style_user = 'bg:mauve fg:crust bold'
+style_root = 'bg:red fg:crust bold'
+format = '[ $user ]($style)'
+
+[directory]
+style = 'bg:peri fg:crust bold'
+format = '[ $path ]($style)'
+truncation_length = 3
+truncation_symbol = '…/'
+
+[directory.substitutions]
+'Documents' = '󰈙 '
+'Downloads' = ' '
+'Music' = '󰝚 '
+'Pictures' = ' '
+'Videos' = ' '
+'rice' = '󰳑 '
+
+[git_branch]
+symbol = ''
+style = 'bg:pink fg:crust'
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = 'bg:pink fg:crust'
+format = '[$all_status$ahead_behind ]($style)'
+
+[c]
+symbol = ''
+style = 'bg:surface fg:lavender'
+format = '[ $symbol( $version) ]($style)'
+
+[rust]
+symbol = ''
+style = 'bg:surface fg:lavender'
+format = '[ $symbol( $version) ]($style)'
+
+[golang]
+symbol = ''
+style = 'bg:surface fg:lavender'
+format = '[ $symbol( $version) ]($style)'
+
+[nodejs]
+symbol = ''
+style = 'bg:surface fg:lavender'
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ''
+style = 'bg:surface fg:lavender'
+format = '[ $symbol( $version) ]($style)'
+
+[lua]
+symbol = ''
+style = 'bg:surface fg:lavender'
+format = '[ $symbol( $version) ]($style)'
+
+[docker_context]
+symbol = ''
+style = 'bg:surface fg:lavender'
+format = '[ $symbol( $context) ]($style)'
+
+[fill]
+symbol = ' '
+
+[cmd_duration]
+min_time = 2000
+style = 'fg:comment'
+format = '[took $duration  ]($style)'
+
+[time]
+disabled = false
+time_format = '%H:%M'
+style = 'fg:peri'
+format = '[ $time ]($style)'
+
+[character]
+success_symbol = '[❯](bold mauve)'
+error_symbol = '[❯](bold red)'
+vimcmd_symbol = '[❮](bold green)'
